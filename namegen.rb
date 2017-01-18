@@ -26,17 +26,16 @@ def menu()
 end
 
 def nimi(sugu)
-  eesnime_fail = File.open("/home/saladus/Arhiiv/Kood/Ruby/Name Generator/#{sugu}_ees.txt")
-  eesnime_fail = File.read("/home/saladus/Arhiiv/Kood/Ruby/Name Generator/#{sugu}_ees.txt")
+  eesnime_fail = File.open("/absoluutne/teekond/failini/#{sugu}_ees.txt")
+  eesnime_fail = File.read("/absoluutne/teekond/failini/#{sugu}_ees.txt")
   eesnime_jada = eesnime_fail.split(" ")
   eesnimede_arv = eesnime_jada.count
   i = Random.rand(0..eesnimede_arv)
 
   eesnimi = eesnime_jada[i]
 
-
-  perenime_fail = File.open("/home/saladus/Arhiiv/Kood/Ruby/Name Generator/pere.txt")
-  perenime_fail = File.read("/home/saladus/Arhiiv/Kood/Ruby/Name Generator/pere.txt")
+  perenime_fail = File.open("/absoluutne/teekond/failini/pere.txt")
+  perenime_fail = File.read("/absoluutne/teekond/failini/pere.txt")
 
   perenime_jada = perenime_fail.split(" ")
   perenimede_arv = perenime_jada.count
